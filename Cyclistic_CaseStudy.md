@@ -44,7 +44,7 @@ The downloaded dataset is compressed into zipfiles. After extracting, the datase
 * end_lng: Geographical data type, the longitude of an end station's location
 * member_casual: Character data type, indicates the type of membership of a customer
 
- To prepare the data for analysis, all 12 files should be combined into a single CSV file. After all the dataset were put into a single directory, the code below were executed on the same working directory.
+ To prepare the data for analysis, all 12 files should be combined into a single CSV file. After all the dataset were put into a single directory, the code below was executed on the same working directory.
 ```
 import os
 import pandas as pd
@@ -57,14 +57,14 @@ for file in os.listdir(os.getcwd()):  #populate the dataframe with the content o
     
 merged_df.to_csv('Cyclistic_data.csv', index=False)
 ```
-Python were used for this process, specfically through os library, to get the files and the pandas library to merge them into one. To verify if the merging is correct, the created dataframe was previewed using the ``` display() ``` function. Upon examination of the preview of the dataframe shown below, there seems to be no problem except for some null values which will be addressed on the next step which is data cleaning.
+Python was used for this process, specifically through os library, to get the files and the pandas library to merge them into one. To verify if the merging is correct, the created data frame was previewed using the ``` display() ``` function. Upon examination of the preview of the data frame shown below, there seems to be no problem except for some null values which will be addressed on the next step which is data cleaning.
 ```
 display(merged_df)
 ```
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/63e28495-8d2c-40cd-af46-6d68cd5146fa)
 
 #### Data Cleaning
-A clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used in not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
+Clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used in not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
 
 ```
 merged_df.duplicated().sum()
@@ -97,6 +97,89 @@ merged_df['member_casual'].unique()
 ```
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/9dc49a08-7cde-45f4-9139-dd52e9798197)
+
+The returned values are distinct showing that there are no misspelled entries. To look into the consistency of the attributes, the ``` info() ``` function is used.
+
+```
+merged_df.info()
+````
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/31c1d6e8-e3c1-4ff0-99f3-d8fa74cde087)
+
+The rest of the data types of the attributes seem correct, except for the ``` started_at ``` and ``` ended_at ``` columns shown as ``` object ``` data type but should be ``` datetime64 ```. To clean this, the ``` astype() ``` function is used.
+
+``` 
+merged_df['started_at'] = merged_df['started_at'].astype('datetime64')
+merged_df['ended_at'] = merged_df['started_at'].astype('datetime64')
+merged_df.info()
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0fd4d701-4254-43a9-ab04-1d76897d5f58)
+
+As found earlier in the data wrangling stage, there are null values. To look into the null values deeper, we use the ``` isnull() ``` function.
+```
+merged_df.isnull().sum()
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9f1f2e8-bbc7-4abf-9eb6-349d6aec85c8)
+
+The columns, ``` start_station_name ```, ``` end_station_name ``` , ``` start_station_id ```, ``` end_station_id ``` has a lot of null values. However, these attributes aren't very useful in our analysis so we will just drop them using the ``` drop() ``` function.
+
+```
+merged_df = merged_df.drop(['start_station_name', 'end_station_name', 'start_station_id', 'end_station_id'], axis = 1)
+merged_df.head()
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/87bb377b-8821-4be5-8c83-b6a6b1ff62a0)
+
+For our analysis, an important quantity we can use is the duration of a ride. This can be readily derived from the dataset, by subtracting the ``` ended_at ``` column from the ``` started_at ``` column and storing this to a new attribute/column we'll name as ``` ride_duration_seconds``` which is the duration of a ride in seconds.
+
+```
+merged_df['ride_duration'] = merged_df['ended_at'] - merged_df['started_at']         # a dummy attribute
+merged_df['ride_duration_seconds'] = merged_df['ride_duration'].dt.total_seconds()   # converting to seconds for usefulness
+merged_df = merged_df.drop(['ride_duration'], axis = 1)                              # dropping the dummy attribute
+merged_df.head()
+```
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/21a7cb57-313d-4c96-86e6-bb8a889d3202)
+
+
+Also, it would be useful later if there is an attribute indicating the time of day when the ride started. This can be extracted from the ``` started_at ``` column by using the ``` .dt.weekday() ``` function, which assumes the weeks starts on Monday (0 = Monday, 6 = Sunday) 
+```
+merged_df['day_of_week'] = merged_df['started_at'].dt.dayofweek
+merged_df.head()
+```
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/9d9c06f1-b249-48a4-ab51-f015d6610874)
+
+## Analyze
+
+The data is now relatively clean so an analysis of the dataset can now be taken. A descriptive analysis can give us an overview of the dataset, which can be taken using the ``` describe() ``` function.
+
+```
+merged_df.describe()
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/72f04303-8805-4cab-a979-598f4c325897)
+
+As we can see, the ``` min ``` of the ``` data_duration_seconds``` is negative which indicates that there are negative values in that column. However, the duration should only be positive, so the entries with these negative values will be cleaned by using the ``` drop() ``` function.
+
+```
+merged_df = merged_df.drop(merged_df[merged_df['ride_duration_seconds'] < 0].index)
+merged_df.describe()
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b0e1672f-b579-47d8-943d-d49c769c03d8)
+
+Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first we export our pre-processed data as a CSV file
+
+```
+merged_df.to_csv('Cyclistic_data_cleaned.csv', index=False)
+```
+
+To work with the data in SQL, we must first create a table with the same attributes as our data and then populate it with the values of our cleaned data.
+
+
+
+
+
+
+
+
 
 
 
