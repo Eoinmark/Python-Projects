@@ -120,13 +120,14 @@ merged_df.isnull().sum()
 ```
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9f1f2e8-bbc7-4abf-9eb6-349d6aec85c8)
 
-The columns, ``` start_station_name ```, ``` end_station_name ``` , ``` start_station_id ```, ``` end_station_id ``` has a lot of null values. However, these attributes aren't very useful in our analysis so we will just drop them using the ``` drop() ``` function.
+The columns, ``` start_station_name ```, ``` end_station_name ``` , ``` start_station_id ```, ``` end_station_id ``` has a lot of null values. However, these attributes aren't very useful in our analysis along with ``` start_lat ```, ``` start_lng ```, ``` end_lat ``` and ``` end_lng ```  so we will just drop them using the ``` drop() ``` function.
 
 ```
-merged_df = merged_df.drop(['start_station_name', 'end_station_name', 'start_station_id', 'end_station_id'], axis = 1)
+merged_df = merged_df.drop(['start_station_name', 'end_station_name', 'start_station_id', 'end_station_id', 'start_lat', 'start_lng' , 'end_lat' , 'end_lng'], axis = 1)
 merged_df.head()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/87bb377b-8821-4be5-8c83-b6a6b1ff62a0)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/6da4d304-4cba-4e6d-803f-a161508bdbf9)
+
 
 For our analysis, an important quantity we can use is the duration of a ride. This can be readily derived from the dataset, by subtracting the ``` ended_at ``` column from the ``` started_at ``` column and storing this to a new attribute/column we'll name as ``` ride_duration_seconds``` which is the duration of a ride in seconds.
 
@@ -137,7 +138,7 @@ merged_df = merged_df.drop(['ride_duration'], axis = 1)                         
 merged_df.head()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/21a7cb57-313d-4c96-86e6-bb8a889d3202)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/32d48685-a39d-4e7c-83c8-942e98e86512)
 
 
 Also, it would be useful later if there is an attribute indicating the time of day when the ride started. This can be extracted from the ``` started_at ``` column by using the ``` .dt.weekday() ``` function, which assumes the weeks starts on Monday (0 = Monday, 6 = Sunday) 
@@ -146,7 +147,8 @@ merged_df['day_of_week'] = merged_df['started_at'].dt.dayofweek
 merged_df.head()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/9d9c06f1-b249-48a4-ab51-f015d6610874)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a8698ec8-e80c-4440-915a-dc559f7b6d44)
+
 
 ## Analyze
 
@@ -155,7 +157,8 @@ The data is now relatively clean so an analysis of the dataset can now be taken.
 ```
 merged_df.describe()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/72f04303-8805-4cab-a979-598f4c325897)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b4d1da4e-cfba-4005-b8c6-9d53d4edc9d7)
+
 
 As we can see, the ``` min ``` of the ``` data_duration_seconds``` is negative which indicates that there are negative values in that column. However, the duration should only be positive, so the entries with these negative values will be cleaned by using the ``` drop() ``` function.
 
@@ -163,18 +166,45 @@ As we can see, the ``` min ``` of the ``` data_duration_seconds``` is negative w
 merged_df = merged_df.drop(merged_df[merged_df['ride_duration_seconds'] < 0].index)
 merged_df.describe()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b0e1672f-b579-47d8-943d-d49c769c03d8)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f7978d25-8651-4091-ac25-22fb935bfe42)
 
-Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first we export our pre-processed data as a CSV file
+Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first, we export our pre-processed data as a CSV file
 
 ```
-merged_df.to_csv('Cyclistic_data_cleaned.csv', index=False)
+merged_df.to_csv('Cyclistic_data_cleanedd.csv', index=False)
 ```
 
 To work with the data in SQL, we must first create a table with the same attributes as our data and then populate it with the values of our cleaned data.
 
+```
+CREATE TABLE cyclistic (
+    ride_id VARCHAR(50) PRIMARY KEY,
+    rideable_type VARCHAR(50),
+    started_at DATETIME,
+    ended_at DATETIME,  
+    member_casual VARCHAR(50),
+    ride_duration_seconds DOUBLE,
+    day_of_week INT
+);
+```
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/81cee3d0-e99b-4c55-a6c2-ed7401c1b922)
 
 
+```
+LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.1/Uploads/Cyclistic_data_cleanedd.csv" INTO TABLE Cyclistic FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+
+```
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/5c7f08ac-3dfc-4109-b99e-dc054e998803)
+
+A quick ``` SELECT ``` query verifies the success of importing the data as table in our SQL database.
+
+```
+SELECT * FROM cyclistic 
+LIMIT 100;
+```
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/709de4e9-a804-4961-b5e5-379a426d3d1e)
 
 
 
