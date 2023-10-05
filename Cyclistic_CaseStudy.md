@@ -168,6 +168,9 @@ merged_df.describe()
 ```
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f7978d25-8651-4091-ac25-22fb935bfe42)
 
+
+
+#### Importing the dataset into an SQL table
 Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first, we export our pre-processed data as a CSV file
 
 ```
@@ -206,6 +209,63 @@ LIMIT 100;
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/709de4e9-a804-4961-b5e5-379a426d3d1e)
 
+
+
+#### Data Findings
+
+After importing our data into the ``` cyclistic ``` table we can now perform queries, such as querying to know the population of the the casual members ``` casual ```, and annual members ``` member ```. 
+
+```
+SELECT 
+    member_casual AS membership_type,
+    COUNT(member_casual) AS total_members
+FROM
+    cyclistic
+GROUP BY
+    member_casual;
+```
+**Data**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/c7efcaf6-9db6-4afc-b5e6-115292aeb987)
+
+**Chart**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/79dfdbe6-c2d6-482c-a311-785ce5364f20)
+
+*insert tableau visualization here*
+
+**Findings**
+* More than half of Cyclistic's customers purchased annual membership
+* Almost 40% of Cyclistic's customers are casual riders 
+
+Next, we look into the ``` ride_duration ``` statistics of a casual rider vs. an annual member.
+
+```
+SELECT
+    member_casual AS membership_type,
+    SUM(ride_duration_seconds)/60 AS total_ride_duration_min,
+    MAX(ride_duration_seconds)/60 AS max_ride_duration_min,
+    MIN(ride_duration_seconds)/60 AS min_ride_duration_min,
+    AVG(ride_duration_seconds)/60 AS avg_ride_druation_min,
+    STDDEV(ride_duration_seconds)/60 AS stddev_ride_duration_min
+FROM 
+    cyclistic
+GROUP BY
+    member_casual;
+```
+**Data**
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9267c32-2cd8-4215-a25e-43e10e6018f0)
+
+**Visualization**
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/48deda44-b2e1-4374-aa67-ac7de3a3eb2e) 
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/51aae5b5-8d25-4565-a1ee-ec3aa03ef247)
+
+**Findings**
+* The total ride duration of casual riders is 47% more than the total ride duration of annual members.
+* The maximum ride duration of casual riders is 32% more than the maximum ride duration of annual members.
+* Both casual riders and annual members have a minimum of 0 minutes of ride duration.
+* Casual riders have an average of 28 minutes of ride duration but a high standard deviation means that ride duration of the casual riders in general varies significantly from this value.
+* Annual members have an average of 13 minutes, and a low standard deviation shows that most of the annual members' ride duration are more or less close to this value.
 
 
 
