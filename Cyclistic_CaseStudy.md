@@ -19,7 +19,7 @@ The business problem we're trying to solve here is how to convince casual member
 
 The data used in this case study were stored in an Amazon AWS cloud database, made available by Motivate International Inc which can be accessed through this link: [https://divvy-tripdata.s3.amazonaws.com/index.html]. The datasets were compressed into zip files, each file sorted in two ways, either per month or per quarter. The zip files organized per month have their file name consisting of the year and the month of each dataset followed by -divvy-tripdata. This will be the dataset chosen for analysis and the latest data which is from March 2022 to March 2023 will be used.
 
-#### Assessing the credibility of the data
+### Assessing the credibility of the data
 To assess the credibility of the chosen data, we'll examine it closely using the "ROCCC" framework, as follows:
 * ***Reliable*** - The chosen data is publicly available and has a data license agreement. It is a suggested dataset by the Google Data Analytics course proving its fit for use. (from good source)
 * ***Original*** - The dataset was from a third-party source and upon looking at the source, its originality is verified as it is owned by the city of Chicago and made available to the public.
@@ -28,7 +28,7 @@ To assess the credibility of the chosen data, we'll examine it closely using the
 * ***Cited*** - Examining the data license agreement, the data used is well-cited.
 
 ## Process
-#### Data Wrangling
+### Data Wrangling
 The downloaded dataset is compressed into zipfiles. After extracting, the dataset is in CSV format having the same 13 attributes as given below:
 * ride_id: Character data type, a unique identifier for each user
 * rideable_type: Character data type, describes the type of bike used
@@ -63,7 +63,7 @@ display(merged_df)
 ```
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/63e28495-8d2c-40cd-af46-6d68cd5146fa)
 
-#### Data Cleaning
+### Data Cleaning
 Clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used in not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
 
 ```
@@ -170,7 +170,7 @@ merged_df.describe()
 
 
 
-#### Importing the dataset into an SQL table
+### Importing the dataset into an SQL table
 Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first, we export our pre-processed data as a CSV file
 
 ```
@@ -209,12 +209,11 @@ LIMIT 100;
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/709de4e9-a804-4961-b5e5-379a426d3d1e)
 
+After importing our data into the ``` cyclistic ``` table we can now perform queries. In this section, all data visualizations were done in Tableau Public.
 
+### Population of Casual Riders Vs. Annual Members
 
-#### Data Findings
-
-After importing our data into the ``` cyclistic ``` table we can now perform queries, such as querying to know the population of the the casual members ``` casual ```, and annual members ``` member ```. 
-
+**Query**
 ```
 SELECT 
     member_casual AS membership_type,
@@ -228,17 +227,20 @@ GROUP BY
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/c7efcaf6-9db6-4afc-b5e6-115292aeb987)
 
-**Chart**
+**Visualization**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/79dfdbe6-c2d6-482c-a311-785ce5364f20)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/8280b399-7b9e-4077-ad35-0c106373d818)
 
-*insert tableau visualization here*
+
 
 **Findings**
+
 * More than half of Cyclistic's customers purchased annual membership
 * Almost 40% of Cyclistic's customers are casual riders 
 
-Next, we look into the ``` ride_duration ``` statistics of a casual rider vs. an annual member.
+### Ride Duration Statistics of Casual Riders and Annual Members**
+
+**Query**
 
 ```
 SELECT
@@ -254,18 +256,76 @@ GROUP BY
     member_casual;
 ```
 **Data**
+
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9267c32-2cd8-4215-a25e-43e10e6018f0)
 
 **Visualization**
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/48deda44-b2e1-4374-aa67-ac7de3a3eb2e) 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/51aae5b5-8d25-4565-a1ee-ec3aa03ef247)
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f3504535-9571-43c7-a67b-99356c7a51f1)
+
 
 **Findings**
+
 * The total ride duration of casual riders is 47% more than the total ride duration of annual members.
 * The maximum ride duration of casual riders is 32% more than the maximum ride duration of annual members.
 * Both casual riders and annual members have a minimum of 0 minutes of ride duration.
-* Casual riders have an average of 28 minutes of ride duration but a high standard deviation means that ride duration of the casual riders in general varies significantly from this value.
-* Annual members have an average of 13 minutes, and a low standard deviation shows that most of the annual members' ride duration are more or less close to this value.
+* Casual riders have an average of 28 minutes of ride duration but a high standard deviation means that the ride duration of casual riders in general varies significantly from this value.
+* Annual members have an average of 13 minutes of ride duration, and a low standard deviation shows that most of the annual members' ride duration is more or less close to this value.
+
+### Bike Preferences of Casual Riders and Annual Members
+
+**Query**
+
+```
+SELECT
+    rideable_type AS bike_type,
+    COUNT(CASE member_casual WHEN 'casual' THEN 1 ELSE null END) AS casual_riders,
+    COUNT(CASE member_casual WHEN 'member' THEN 1 ELSE null END) AS annual_members
+FROM 
+    cyclistic
+GROUP BY
+    rideable_type;
+```
+
+**Data**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/fccc785d-962d-456a-b694-9b754835ab52)
+
+**Visualization**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/6ffa21f4-ba38-4f9c-afdd-a3bc541e352f)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/3e0d8ead-104d-4a42-926b-e23399233575)
+
+**Findings**
+* For casual riders, the most popular choice for bike type is the electric bike (57.01%) followed by classic bike (36.78%) and then by docked bike (6.21%)
+* For annual members, the most popular choice for bike type is the electric bike (51.90%) and then followed by the classic bike (36.78%).
+* Both types of customers chose electric bikes the most, and dock bikes the least.
+
+### Casual Riders VS Annual Members Weekly Cyclistic Use
+
+**Query**
+
+```
+SELECT
+    day_of_week,
+    COUNT(CASE member_casual WHEN 'casual' THEN 1 ELSE null END) AS casual_riders,
+    COUNT(CASE member_casual WHEN 'member' THEN 1 ELSE null END) AS annual_members
+FROM
+    cyclistic
+GROUP BY
+    day_of_week
+ORDER BY
+    day_of_week;
+```
+
+**Data**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0cb3abe6-be9b-4c73-be26-ba5aad119ed7)
+
+**Visualization**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0dd459d3-39e6-4771-a4a6-84e36fd0147b)
+
 
 
 
