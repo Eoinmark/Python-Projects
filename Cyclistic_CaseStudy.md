@@ -326,6 +326,33 @@ ORDER BY
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0dd459d3-39e6-4771-a4a6-84e36fd0147b)
 
+**Findings**
+* For casual riders, the use of Cyclistic is almost constant at the beginning of the week and then would rise towards the latter part of the week, peaking at Saturday and would gradually fall on Sunday until Monday of a new week.
+* For annual members, the rise in the use of Cyclistic tends to be in the middle of the week and then would fall on the weekends.
+
+### Casual Riders VS Annual Members Monthly Cyclistic Use
+
+**Query**
+
+```
+SELECT
+    MONTH(started_at) AS month_started,
+    COUNT(CASE member_casual WHEN 'casual' THEN 1 ELSE null END) AS casual_riders,
+    COUNT(CASE member_casual WHEN 'member' THEN 1 ELSE null END) AS annual_members
+FROM
+    cyclistic
+GROUP BY
+    month_started
+ORDER BY
+    month_started;
+```
+
+**Data**
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d8e6d0d6-aaff-42b0-b0b0-527aa9b50d33)
+
+**Visualization**
+
 
 
 
