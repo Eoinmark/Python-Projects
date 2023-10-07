@@ -353,6 +353,17 @@ ORDER BY
 
 **Visualization**
 
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a18c2a2e-035b-47c9-acb6-d40dc75758a0)
+
+**Findings**
+* Both casual riders and annual members show almost a similar trend in the use of Cyclistic over the course of a year.
+* The peak month of Cyclistic use for both casual riders and annual members is in July which corresponds to summer month in Chicago [1].
+* Cyclistic users, both for casual riders and annual members tend to rise in the middle of the year and then fall down at the start and end of the year.
+
+
+## Reference/s:
+[1] https://weatherspark.com/y/14091/Average-Weather-in-Chicago-Illinois-United-States-Year-Round#:~:text=The%20warm%20season%20lasts%20for,low%20of%2070%C2%B0F.
+
 
 
 
