@@ -380,6 +380,12 @@ https://public.tableau.com/authoring/Cyclistic_dashboard_16967675172600/Dashboar
 * Both casual riders and annual members rise in number on the middle of the year which are summer months (June to August) and decline at the end and start of the year, corresponding to winter months (December to February).
 * The most popular bike type for both casual riders and annual members are the electric bike, and the least popular type is the docked bike.
 
+## Act
+Upon the findings from the analysis of the data, here are my top three recommendations:
+1. Offer a "weekend-only" annual membership which gives its members perks same with annual membership that is much more affordable but is only eligible on weekends starting Friday until Sunday.
+2. Boost marketing on summer months and offer a limited-time discount on annual membership from June to August when the Cyclistic users are at its peak.
+3. Offer a much more cheaper version of the annual membership by limiting the type of bike available from 3 (electric bike, classic bike and docked bike) to only 2 (electric bike and classic bike).
+
 ## Reference/s:
 [1] https://weatherspark.com/y/14091/Average-Weather-in-Chicago-Illinois-United-States-Year-Round#:~:text=The%20warm%20season%20lasts%20for,low%20of%2070%C2%B0F.
 
