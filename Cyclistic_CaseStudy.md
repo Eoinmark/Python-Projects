@@ -365,6 +365,20 @@ For better access, the ```month_started``` is re-indexed to start from 1 (July 2
 * The peak month of Cyclistic use for both casual riders and annual members is in July which corresponds to summer month in Chicago [1].
 * Cyclistic users, both for casual riders and annual members tend to rise in the middle of the year and then fall down at the start and end of the year.
 
+## Share
+
+The analysis of our data is summarized on a dashboard created using Tableu Public, and accessible through the link below:
+https://public.tableau.com/authoring/Cyclistic_dashboard_16967675172600/Dashboard1#1
+
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a132b29b-ca0d-46d7-89d6-d6314950a5d1)
+
+**Key Findings**
+* More than half of Cyclistic's customer are annual members. The casual riders are only 40% of their total customers.
+* Although there are more annual members, casual riders use Cyclistics more than the annual members as they have longer total ride duration and higher average ride duration.
+* Casual riders tend to use Cyclistic more on the weekends probably to stroll around Chicago as a form of vacation.
+* Annual members tend to use Cyclistic more on the weekdays, probably to commute to their workplaces.
+* Both casual riders and annual members rise in number on the middle of the year which are summer months (June to August) and decline at the end and start of the year, corresponding to winter months (December to February).
+* The most popular bike type for both casual riders and annual members are the electric bike, and the least popular type is the docked bike.
 
 ## Reference/s:
 [1] https://weatherspark.com/y/14091/Average-Weather-in-Chicago-Illinois-United-States-Year-Round#:~:text=The%20warm%20season%20lasts%20for,low%20of%2070%C2%B0F.
