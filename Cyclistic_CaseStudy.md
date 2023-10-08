@@ -336,20 +336,25 @@ ORDER BY
 
 ```
 SELECT
-    MONTH(started_at) AS month_started,
+    MONTH(started_at) AS month_started, 
+    YEAR(started_at) AS year_started,
     COUNT(CASE member_casual WHEN 'casual' THEN 1 ELSE null END) AS casual_riders,
     COUNT(CASE member_casual WHEN 'member' THEN 1 ELSE null END) AS annual_members
 FROM
     cyclistic
 GROUP BY
+    year_started,
     month_started
 ORDER BY
+    year_started,
     month_started;
 ```
 
 **Data**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d8e6d0d6-aaff-42b0-b0b0-527aa9b50d33)
+![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b39ce222-499b-4223-91a3-74e8eb081f78)
+
+For better access, the ```month_started``` is re-indexed to start from 1 (July 2022) to 13 (July 2023).
 
 **Visualization**
 
