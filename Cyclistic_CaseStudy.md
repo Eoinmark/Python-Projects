@@ -23,11 +23,11 @@ The key stakeholders of this case study are the following:
 
 ## Prepare
 
-The data used in this case study were stored in an Amazon AWS cloud database, made available by Motivate International Inc which can be accessed through this link: [https://divvy-tripdata.s3.amazonaws.com/index.html]. The datasets were compressed into zip files, each file sorted in two ways, either per month or per quarter. The zip files organized per month have their file name consisting of the year and the month of each dataset followed by -divvy-tripdata. This will be the dataset chosen for analysis and the latest data which is from July 2022 to July 2023 will be used.
+The data used in this case study were stored in an Amazon AWS cloud database, made available by Motivate International Inc which can be accessed through this link: [https://divvy-tripdata.s3.amazonaws.com/index.html]. The datasets were compressed into zip files, each file sorted in two ways, either per month or per quarter. The zip files organized per month have their file name consisting of the year and the month of each dataset followed by -divvy-tripdata. This will be the dataset chosen for analysis and the latest data, which is from July 2022 to July 2023 will be used.
 
 ### Assessing the credibility of the data
 To assess the credibility of the chosen data, we'll examine it closely using the "ROCCC" framework, as follows:
-* ***Reliable*** - The chosen data is publicly available and has a data license agreement. It is a suggested dataset by the Google Data Analytics course proving its fit for use. (from good source)
+* ***Reliable*** - The chosen data is publicly available and has a data license agreement. The dataset comes from a good source proving its fit for use. 
 * ***Original*** - The dataset was from a third-party source and upon looking at the source, its originality is verified as it is owned by the city of Chicago and made available to the public.
 * ***Comprehensive*** - Our problem at hand aims to find the difference between each type of user in the bike-sharing company. The dataset provides comprehensive information about the users of a bike-sharing company along with the type of membership of each user/
 * ***Current*** - The most recent dataset chosen includes this year's and last year's data which shows its relevance and up-to-date.  
@@ -50,7 +50,7 @@ The downloaded dataset is compressed into zipfiles. After extracting, the datase
 * end_lng: Geographical data type, the longitude of an end station's location
 * member_casual: Character data type, indicates the type of membership of a customer
 
- To prepare the data for analysis, all 12 files should be combined into a single CSV file. After all the dataset were put into a single directory, the code below was executed on the same working directory.
+ To prepare the data for analysis, all 12 files should be combined into a single CSV file. After all the data were put into a single directory, the code below was executed on the same working directory.
 ```
 import os
 import pandas as pd
@@ -70,7 +70,7 @@ display(merged_df)
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/63e28495-8d2c-40cd-af46-6d68cd5146fa)
 
 ### Data Cleaning
-Clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used in not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
+Clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used is not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
 
 ```
 merged_df.duplicated().sum()
@@ -78,7 +78,7 @@ merged_df.duplicated().sum()
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f2a9e7e5-db7b-4f87-8152-a45e8b18e72c)
 
-The function returned 0 which means there are no duplicate entry in out data. Next we'll ensure that the consistency of the attributes. For this, the ```unique()``` function will be used. This also allows the checking of mispelled entries. The relevant attributes that needs to be checked are the ```rideable_type```, ```start_station_name```, ```end_station_name```, and ```member_casual```  columns.
+The function returned 0 which means there are no duplicate entries in our data. Next, we'll ensure the consistency of the attributes. For this, the ```unique()``` function will be used. This also allows the checking of misspelled entries. The relevant attributes that needs to be checked are the ```rideable_type```, ```start_station_name```, ```end_station_name```, and ```member_casual```  columns.
 
 ```
 merged_df['rideable_type'].unique()
@@ -373,24 +373,24 @@ For better access, the ```month_started``` is re-indexed to start from 1 (July 2
 
 ## Share
 
-The analysis of our data is summarized on a dashboard created using Tableu Public, and accessible through the link below:
+The analysis of our data is summarized on a dashboard created using Tableau Public, and accessible through the link below:
 https://public.tableau.com/authoring/Cyclistic_dashboard_16967675172600/Dashboard1#1
 
 ![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a132b29b-ca0d-46d7-89d6-d6314950a5d1)
 
 **Key Findings**
-* More than half of Cyclistic's customer are annual members. The casual riders are only 40% of their total customers.
+* More than half of Cyclistic's customers are annual members. The casual riders are only 40% of their total customers.
 * Although there are more annual members, casual riders use Cyclistics more than the annual members as they have longer total ride duration and higher average ride duration.
 * Casual riders tend to use Cyclistic more on the weekends probably to stroll around Chicago as a form of vacation.
 * Annual members tend to use Cyclistic more on the weekdays, probably to commute to their workplaces.
-* Both casual riders and annual members rise in number on the middle of the year which are summer months (June to August) and decline at the end and start of the year, corresponding to winter months (December to February).
-* The most popular bike type for both casual riders and annual members are the electric bike, and the least popular type is the docked bike.
+* Both casual riders and annual members rise in number in the middle of the year which are the summer months (June to August) and decline at the end and start of the year, corresponding to the winter months (December to February).
+* The most popular bike type for both casual riders and annual members is the electric bike, and the least popular type is the docked bike.
 
 ## Act
 Upon the findings from the analysis of the data, here are my top three recommendations:
-1. Offer a "weekend-only" annual membership which gives its members perks same with annual membership that is much more affordable but is only eligible on weekends starting Friday until Sunday.
-2. Boost marketing on summer months and offer a limited-time discount on annual membership from June to August when the Cyclistic users are at its peak.
-3. Offer a much more cheaper version of the annual membership by limiting the type of bike available from 3 (electric bike, classic bike and docked bike) to only 2 (electric bike and classic bike).
+1. Offer a "weekend-only" annual membership which gives its members perks same with annual membership that are much more affordable but are only eligible on weekends starting Friday until Sunday.
+2. Boost marketing during the summer months and offer a limited-time discount on annual membership from June to August to capitalize on the season when Cyclistic users are at their peak.
+3. Offer a much cheaper version of the annual membership by limiting the type of bike available from 3 (electric bike, classic bike, and docked bike) to only 2 (electric bike and classic bike).
 
 ## Reference/s:
 [1] https://weatherspark.com/y/14091/Average-Weather-in-Chicago-Illinois-United-States-Year-Round#:~:text=The%20warm%20season%20lasts%20for,low%20of%2070%C2%B0F.
