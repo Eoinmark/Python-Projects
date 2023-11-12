@@ -1,4 +1,4 @@
-![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/38e6ee93-7aaa-44a4-b0b0-ef7da1afddcb)# Python-Projects - John Mark Lappay
+# Python-Projects - John Mark Lappay
 This repository is a compilation of my academic and personal projects accomplished using Python. The most common libraries used in these projects include NumPy, Pandas, and Matplotlib.
 
 I can be contacted through:
