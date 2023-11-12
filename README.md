@@ -19,9 +19,9 @@ In this project, I used Python's Pandas library to perform data cleaning, wrangl
 #
 
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/84f9c0b4-a99f-403e-a1fa-87089864fd1c"> **[Logistic Map Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LogisticMap.ipynb)**
 
-In this project, I used Python's Pandas library to perform data cleaning, wrangling, preprocessing, and analysis from a bike-sharing company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis of the data and Tableau for data visualization and presented my suggestions based on the key findings of my analysis.
+In this notebook, I explored the behavior of a logistic map, which is a mathematical function used in modeling population growth. For this, I used Python's NumPy and Matplotlib libraries.
 
 
 <br />
