@@ -192,9 +192,6 @@ CREATE TABLE cyclistic (
     day_of_week INT
 );
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/81cee3d0-e99b-4c55-a6c2-ed7401c1b922)
-
-
 ```
 LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.1/Uploads/Cyclistic_data_cleanedd.csv" INTO TABLE Cyclistic FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
 
