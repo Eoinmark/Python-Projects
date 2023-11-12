@@ -36,7 +36,7 @@ The popular idea of the butterfly effect has its roots in the real-life implicat
 
 #
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/79ee4b5d-c87b-43c0-a955-80cf256fc4"> **[Predator-prey Population Dynamics](https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb)**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/40d4eea9-bf43-424c-aad8-5772d57000e1"> **[Predator-prey Population Dynamics](https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb)**
 
 The dynamics of the population of predator and prey is an interest of study in ecology. I explored and simulated in this notebook their population dynamics using the Lottka-Volterra Model, a pair of first-order nonlinear differential equations that represent how the predator-prey population interacts. I used Python's Numpy library and Scipy library to solve these differential equations and Matplotlib for visualization.
 
