@@ -1,4 +1,4 @@
-![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/bf37abee-0da5-4ea3-91a3-2de542752fde)## About this case study
+## About this case study
 
 ![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c)
 
