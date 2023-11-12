@@ -11,15 +11,12 @@ I can be contacted through:
 
 ## Projects
 
-<img align="left" width="250" height="150" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
+<img align="left" width="300" height="200" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
-This is a case study I accomplished as a capstone project for the Google Data Analytics course. I assumed the position of a junior data analyst for a bike-share company called Cyclistics. For this role, I used Python's Pandas library to perform data cleaning, data wrangling, data preprocessing and data analysis from the company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis on the data and Tableu for data visualization and presenting my suggestions based on the key finding of my analysis.
+I accomplished This case study as a capstone project for my Google Data Analytics course. I assumed the position of a junior data analyst for a bike-share company called Cyclistics. For this role, I used Python's Pandas library to perform data cleaning, wrangling, preprocessing, and analysis from the company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis of the data and Tableau for data visualization and presented my suggestions based on the key findings of my analysis.
 
 #
-<img align="left" width="250" height="150" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
-
-This is a case study I accomplished as a capstone project for the Google Data Analytics course. I assumed the position of a junior data analyst for a bike-share company called Cyclistics. For this role, I used Python's Pandas library to perform data cleaning, data wrangling, data preprocessing and data analysis from the company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis on the data and Tableu for data visualization and presenting my suggestions based on the key finding of my analysis.
-
+<img align="left" width="300" height="200" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
 <br />
 
