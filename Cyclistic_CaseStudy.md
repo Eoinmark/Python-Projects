@@ -1,5 +1,6 @@
 ## About this case study
-![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/c0c97fa8-7952-4bfd-b25d-1ecd388e3a46)
+
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c)
 
 *Photo obtained from https://www.wallpaperflare.com/orange-bicycle-lot-parked-during-daytime-bicycles-bike-sharing-wallpaper-wmdxp*
 
