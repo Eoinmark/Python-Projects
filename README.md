@@ -13,7 +13,7 @@ I can be contacted through:
 
 <img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
-In this project, I used Python's Pandas library to perform data cleaning, wrangling, preprocessing, and analysis from a bike-sharing company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis of the data and Tableau for data visualization and presented my suggestions based on the key findings of my analysis.
+In this case study, I used Python's Pandas library to perform data cleaning, wrangling, preprocessing, and analysis from a bike-sharing company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis of the data and Tableau for data visualization and presented my suggestions based on the key findings of my analysis.
 
 <br />
 
@@ -28,9 +28,17 @@ In this notebook, I explored the behavior of a logistic map, which is a mathemat
 #
 
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/13557b0c-0296-4ecf-97e8-b82e75d157f9"> **[Logistic Map Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LogisticMap.ipynb)**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/13557b0c-0296-4ecf-97e8-b82e75d157f9"> **[Butterfly Effect and the Lorenz Attractor: Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LorenzAttractor.ipynb)**
 
-The popular idea of the butterfly effect has its roots in the real-life implication of the Lorenz Attractor. This notebook explored this strange attractor and simulated this model defined by the Lorenz equation which is a system of ordinary differential equations. I used Python's Numpy library and Scipy library to solve for these differential equations and Matplotlib for visualization.
+The popular idea of the butterfly effect has its roots in the real-life implication of the Lorenz Attractor. This notebook explored this strange attractor and simulated this model defined by the Lorenz equation which is a system of ordinary differential equations. I used Python's Numpy library and Scipy library to solve these differential equations and Matplotlib for visualization.
+
+<br />
+
+#
+
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/79ee4b5d-c87b-43c0-a955-80cf256fc4"> **[Predator-prey Population Dynamics](https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb)**
+
+The dynamics of the population of predator and prey is an interest of study in ecology. I explored and simulated in this notebook their population dynamics using the Lottka-Volterra Model, a pair of first-order nonlinear differential equations that represent how the predator-prey population interacts. I used Python's Numpy library and Scipy library to solve these differential equations and Matplotlib for visualization.
 
 <br />
 
@@ -38,7 +46,7 @@ The popular idea of the butterfly effect has its roots in the real-life implicat
 
 <br />
 
-## A little about me
+## About Me
 
 
 ![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/016cc6b2-36dc-479e-93b0-6d43c1a9b37d)
