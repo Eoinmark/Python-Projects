@@ -1,4 +1,4 @@
-## About this case study
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/bf37abee-0da5-4ea3-91a3-2de542752fde)## About this case study
 
 ![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c)
 
@@ -68,7 +68,7 @@ Python was used for this process, specifically through os library, to get the fi
 ```
 display(merged_df)
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/63e28495-8d2c-40cd-af46-6d68cd5146fa)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/42578ee6-03a1-4bca-8ba1-39c960095a12)
 
 ### Data Cleaning
 Clean data ensures an accurate analysis. Data cleaning is then the next step in processing the data since the dataset used is not yet clean. First duplicate entries must be removed as this could skew our result. For this, ```the duplicated().sum()``` function is used.
@@ -77,7 +77,8 @@ Clean data ensures an accurate analysis. Data cleaning is then the next step in 
 merged_df.duplicated().sum()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f2a9e7e5-db7b-4f87-8152-a45e8b18e72c)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/14948fd3-e1af-43b4-bcd9-1b61a9205ac7)
+
 
 The function returned 0 which means there are no duplicate entries in our data. Next, we'll ensure the consistency of the attributes. For this, the ```unique()``` function will be used. This also allows the checking of misspelled entries. The relevant attributes that needs to be checked are the ```rideable_type```, ```start_station_name```, ```end_station_name```, and ```member_casual```  columns.
 
@@ -85,7 +86,7 @@ The function returned 0 which means there are no duplicate entries in our data. 
 merged_df['rideable_type'].unique()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/bc55c19e-2c45-4db9-afac-444506d5e2e6)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/36bb2b7f-8ccf-4d07-885c-f11502881104)
 
 ```
 merged_df['start_station_name'].unique()
@@ -96,21 +97,19 @@ merged_df['start_station_name'].unique()
 ```
 merged_df['end_station_name'].unique()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/6fe35e62-27e3-4e0b-8fdc-757bcde00293)
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/ee1d7396-c047-463e-8d2a-6f606ab1a9cc)
 
 ```
 merged_df['member_casual'].unique()
 ```
-
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/9dc49a08-7cde-45f4-9139-dd52e9798197)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/9d61b376-08c8-46bc-818c-db1b8b4a28c0)
 
 The returned values are distinct showing that there are no misspelled entries. To look into the consistency of the attributes, the ``` info() ``` function is used.
 
 ```
 merged_df.info()
 ````
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/31c1d6e8-e3c1-4ff0-99f3-d8fa74cde087)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/ddc9cd46-fb02-4f06-86fc-e408cd0fc332)
 
 The rest of the data types of the attributes seem correct, except for the ``` started_at ``` and ``` ended_at ``` columns shown as ``` object ``` data type but should be ``` datetime64 ```. To clean this, the ``` astype() ``` function is used.
 
@@ -119,13 +118,13 @@ merged_df['started_at'] = merged_df['started_at'].astype('datetime64')
 merged_df['ended_at'] = merged_df['started_at'].astype('datetime64')
 merged_df.info()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0fd4d701-4254-43a9-ab04-1d76897d5f58)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/14170178-d3e8-4218-8970-bb6f988a8b5f)
 
 As found earlier in the data wrangling stage, there are null values. To look into the null values deeper, we use the ``` isnull() ``` function.
 ```
 merged_df.isnull().sum()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9f1f2e8-bbc7-4abf-9eb6-349d6aec85c8)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/2ab932b1-ed75-47ae-85b8-02c3f183da3c)
 
 The columns, ``` start_station_name ```, ``` end_station_name ``` , ``` start_station_id ```, ``` end_station_id ``` has a lot of null values. However, these attributes aren't very useful in our analysis along with ``` start_lat ```, ``` start_lng ```, ``` end_lat ``` and ``` end_lng ```  so we will just drop them using the ``` drop() ``` function.
 
@@ -133,8 +132,8 @@ The columns, ``` start_station_name ```, ``` end_station_name ``` , ``` start_st
 merged_df = merged_df.drop(['start_station_name', 'end_station_name', 'start_station_id', 'end_station_id', 'start_lat', 'start_lng' , 'end_lat' , 'end_lng'], axis = 1)
 merged_df.head()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/6da4d304-4cba-4e6d-803f-a161508bdbf9)
 
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/f2622f5a-5ea9-4571-88e6-8f5cb899b65e)
 
 For our analysis, an important quantity we can use is the duration of a ride. This can be readily derived from the dataset, by subtracting the ``` ended_at ``` column from the ``` started_at ``` column and storing this to a new attribute/column we'll name as ``` ride_duration_seconds``` which is the duration of a ride in seconds.
 
@@ -145,7 +144,7 @@ merged_df = merged_df.drop(['ride_duration'], axis = 1)                         
 merged_df.head()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/32d48685-a39d-4e7c-83c8-942e98e86512)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/9d6b24fd-569d-4e09-ad86-c5c0a56ba8f9)
 
 
 Also, it would be useful later if there is an attribute indicating the time of day when the ride started. This can be extracted from the ``` started_at ``` column by using the ``` .dt.weekday() ``` function, which assumes the weeks starts on Monday (0 = Monday, 6 = Sunday) 
@@ -154,8 +153,7 @@ merged_df['day_of_week'] = merged_df['started_at'].dt.dayofweek
 merged_df.head()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a8698ec8-e80c-4440-915a-dc559f7b6d44)
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/18c31086-f2ca-43f5-a38d-cd506989860b)
 
 ## Analyze
 
@@ -164,8 +162,7 @@ The data is now relatively clean so an analysis of the dataset can now be taken.
 ```
 merged_df.describe()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b4d1da4e-cfba-4005-b8c6-9d53d4edc9d7)
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/3506182b-e824-443d-bc27-0b89ab7bb49e)
 
 As we can see, the ``` min ``` of the ``` data_duration_seconds``` is negative which indicates that there are negative values in that column. However, the duration should only be positive, so the entries with these negative values will be cleaned by using the ``` drop() ``` function.
 
@@ -173,9 +170,7 @@ As we can see, the ``` min ``` of the ``` data_duration_seconds``` is negative w
 merged_df = merged_df.drop(merged_df[merged_df['ride_duration_seconds'] < 0].index)
 merged_df.describe()
 ```
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f7978d25-8651-4091-ac25-22fb935bfe42)
-
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/18188229-908a-40e1-b4f1-92455400fc88)
 
 ### Importing the dataset into an SQL table
 Now that the data is thoroughly cleaned, a more in-depth analysis can be done using Excel, Sheets, or SQL. Since the dataset is too large for Excel or Sheets to handle, we will use SQL, specifically MySQL using POPSQL editor. But first, we export our pre-processed data as a CSV file
@@ -204,8 +199,7 @@ CREATE TABLE cyclistic (
 LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.1/Uploads/Cyclistic_data_cleanedd.csv" INTO TABLE Cyclistic FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
 
 ```
-
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/5c7f08ac-3dfc-4109-b99e-dc054e998803)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/d7ceaead-6e25-415f-b091-4fa7b45a884b)
 
 A quick ``` SELECT ``` query verifies the success of importing the data as table in our SQL database.
 
@@ -214,7 +208,8 @@ SELECT * FROM cyclistic
 LIMIT 100;
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/709de4e9-a804-4961-b5e5-379a426d3d1e)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/caf981a9-0374-4aa7-8713-46b2483dad4c)
+
 
 After importing our data into the ``` cyclistic ``` table we can now perform queries. In this section, all data visualizations were done in Tableau Public.
 
@@ -232,13 +227,12 @@ GROUP BY
 ```
 **Data**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/c7efcaf6-9db6-4afc-b5e6-115292aeb987)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/b0968a88-959e-404c-958e-1403ed88a039)
+
 
 **Visualization**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/8280b399-7b9e-4077-ad35-0c106373d818)
-
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/6c784b5a-26fe-4f2a-a58c-a8c748f32d7b)
 
 **Findings**
 
@@ -264,12 +258,11 @@ GROUP BY
 ```
 **Data**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/d9267c32-2cd8-4215-a25e-43e10e6018f0)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/b09c9eb9-2410-4701-bcbb-68ae97629a3c)
 
 **Visualization**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/f3504535-9571-43c7-a67b-99356c7a51f1)
-
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/f091ddc5-5d36-4abc-9261-4489f9916ade)
 
 **Findings**
 
@@ -296,12 +289,13 @@ GROUP BY
 
 **Data**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/fccc785d-962d-456a-b694-9b754835ab52)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/21ea56b9-5376-4367-a817-a5ab15ed4bc4)
 
 **Visualization**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/6ffa21f4-ba38-4f9c-afdd-a3bc541e352f)
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/3e0d8ead-104d-4a42-926b-e23399233575)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/50886f13-45f0-4243-a5df-e669341573dd)
+
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/a32f50f8-d1ac-4285-9b8f-fb2b3cd33348)
 
 **Findings**
 * For casual riders, the most popular choice for bike type is the electric bike (57.01%) followed by classic bike (36.78%) and then by docked bike (6.21%)
