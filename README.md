@@ -19,6 +19,8 @@ In this project, I used Python's Pandas library to perform data cleaning, wrangl
 
 <img align="left" width="300" height="200" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
+ad
+
 <br />
 
 ## A little about me
