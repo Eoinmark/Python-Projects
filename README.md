@@ -60,6 +60,13 @@ In this notebook, I explored the behavior of a logistic map, which is a mathemat
 
 ## Certificates
 
-- [Sample Certificate](link)
-
-
+- [Google Data Analytics Professional Certificate By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/DataAnalytics_Certificate.pdf)
+- [SQL for Data Science By Great Learning](https://olympus.mygreatlearning.com/courses/40120/certificate)
+- [Analyze Data to Answer Questions By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Analyze%20Data%20to%20Answer%20Questions.pdf)
+- [Ask Questions to Make Data-Driven Decisions By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Ask%20Questions%20to%20Make%20Data-Driven%20Decisions.pdf)
+- [Data Analysis with R Programming By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Data%20Analysis%20with%20R%20Programming.pdf)
+- [Foundations Data, Data, Everywhere By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Foundations%20Data%2C%20Data%2C%20Everywhere.pdf)
+- [Prepare Data for Exploration By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Prepare%20Data%20for%20Exploration.pdf)
+- [Process Data from Dirty to Clean By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Process%20Data%20from%20Dirty%20to%20Clean.pdf)
+- [Share Data Through the Art of Visualization By Google](https://github.com/Eoinmark/Python-Projects/blob/main/Certificates/Share%20Data%20Through%20the%20Art%20of%20Visualization.pdf)
+- [Data Visualization using Power BI By Great Learning](https://olympus.mygreatlearning.com/courses/30824/certificate)
