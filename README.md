@@ -19,7 +19,7 @@ In this case study, I used Python's Pandas library to perform data cleaning, wra
 
 #
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/b7aa0620-8c97-4bda-a5ca-b1c6456d8dfe"> **[Modeling Pattern-Formation and Simulating Reaction Diffusion]([https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb](https://github.com/Eoinmark/Python-Projects/blob/main/ReactionDifusion.ipynb))**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/b7aa0620-8c97-4bda-a5ca-b1c6456d8dfe"> **[Modeling Pattern-Formation and Simulating Reaction Diffusion](https://github.com/Eoinmark/Python-Projects/blob/main/ReactionDifusion.ipynb)**
 
 How patterns form in nature such as the pattern found in Jaguar's fur has long been a subject of interest to experts. The reaction-diffusion equation developed by Alan Turing models mechanism. In this notebook, I simulated pattern formation through this model and explored this equation using Python. Python's Numpy library and Scipy library were used to solve this equation and Matplotlib was used for visualization.
 
@@ -53,6 +53,16 @@ In this notebook, I explored the behavior of a logistic map, which is a mathemat
 #
 
 <br />
+
+## Core Competencies
+
+* Programming Languages: Python, Fortran, SQL, R and C++
+* Tools: MySQL, Jupiter Notebook, Tableau, MS Excel and Google Sheets
+
+<br />
+
+## Certificates
+
 
 ## About Me
 
