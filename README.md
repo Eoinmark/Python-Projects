@@ -1,5 +1,5 @@
 # Python-Projects - John Mark Lappay
-This repository is a compilation of my academic and personal projects accomplished using Python. The most common libraries used in these projects include NumPy, Pandas, and Matplotlib.
+This repository is a compilation of my academic and personal projects accomplished using Python. The most common libraries used in these projects include NumPy, Pandas, Scipy, and Matplotlib.
 
 I can be contacted through:
 * LinkedIn: https://www.linkedin.com/in/jmj-lappay/
