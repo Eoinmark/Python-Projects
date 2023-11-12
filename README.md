@@ -44,6 +44,14 @@ The dynamics of the population of predator and prey is an interest of study in e
 
 #
 
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/b7aa0620-8c97-4bda-a5ca-b1c6456d8dfe"> **[Modeling Pattern-Formation and Simulating Reaction Diffusion]([https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb](https://github.com/Eoinmark/Python-Projects/blob/main/ReactionDifusion.ipynb))**
+
+How patterns form in nature such as the pattern found in Jaguar's fur has long been a subject of interest to experts. The reaction-diffusion equation is one model that simulates this mechanism. In this notebook, I simulated pattern formation through this model and explored this equation using Python. Python's Numpy library and Scipy library were used to solve this equation and Matplotlib for were used for visualization.
+
+<br />
+
+#
+
 <br />
 
 ## About Me
