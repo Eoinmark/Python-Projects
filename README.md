@@ -7,7 +7,8 @@ I can be contacted through:
 * E-mail: jmj.lappay@gmail.com
 
 ## A little about me
-<img align="left" width="250" height="150" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/e477d458-8471-4627-aa09-248ed2f6b026"> 
+
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/016cc6b2-36dc-479e-93b0-6d43c1a9b37d)
 
 I am John Mark Lappay, a fresh graduate from the University of the Philippines - Los Banos.
 
