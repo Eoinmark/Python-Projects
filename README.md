@@ -19,14 +19,14 @@ In this case study, I used Python's Pandas library to perform data cleaning, wra
 
 #
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/84f9c0b4-a99f-403e-a1fa-87089864fd1c"> **[Logistic Map Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LogisticMap.ipynb)**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/b7aa0620-8c97-4bda-a5ca-b1c6456d8dfe"> **[Modeling Pattern-Formation and Simulating Reaction Diffusion]([https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb](https://github.com/Eoinmark/Python-Projects/blob/main/ReactionDifusion.ipynb))**
 
-In this notebook, I explored the behavior of a logistic map, which is a mathematical function used in modeling population growth, and its sensitive dependence on its parameters. For this, I used Python's NumPy library to evaluate its recurring equation and Matplotlib library for visualization.
+How patterns form in nature such as the pattern found in Jaguar's fur has long been a subject of interest to experts. The reaction-diffusion equation developed by Alan Turing models mechanism. In this notebook, I simulated pattern formation through this model and explored this equation using Python. Python's Numpy library and Scipy library were used to solve this equation and Matplotlib was used for visualization.
 
 <br />
 
-#
 
+#
 
 <img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/13557b0c-0296-4ecf-97e8-b82e75d157f9"> **[Butterfly Effect and the Lorenz Attractor: Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LorenzAttractor.ipynb)**
 
@@ -36,7 +36,7 @@ The popular idea of the butterfly effect has its roots in the real-life implicat
 
 #
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/40d4eea9-bf43-424c-aad8-5772d57000e1"> **[Predator-prey Population Dynamics](https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb)**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/61e126b2-3f18-4013-9c33-52dd164730b7"> **[Predator-prey Population Dynamics](https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb)**
 
 The dynamics of the population of predator and prey is an interest of study in ecology. I explored and simulated in this notebook their population dynamics using the Lottka-Volterra Model, a pair of first-order nonlinear differential equations that represent how the predator-prey population interacts. I used Python's Numpy library and Scipy library to solve these differential equations and Matplotlib for visualization.
 
@@ -44,9 +44,9 @@ The dynamics of the population of predator and prey is an interest of study in e
 
 #
 
-<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/b7aa0620-8c97-4bda-a5ca-b1c6456d8dfe"> **[Modeling Pattern-Formation and Simulating Reaction Diffusion]([https://github.com/Eoinmark/Python-Projects/blob/main/PopulationDyrnamics.ipynb](https://github.com/Eoinmark/Python-Projects/blob/main/ReactionDifusion.ipynb))**
+<img align="left" width="250" height="180" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/84f9c0b4-a99f-403e-a1fa-87089864fd1c"> **[Logistic Map Exploratory Analysis](https://github.com/Eoinmark/Python-Projects/blob/main/LogisticMap.ipynb)**
 
-How patterns form in nature such as the pattern found in Jaguar's fur has long been a subject of interest to experts. The reaction-diffusion equation is one model that simulates this mechanism. In this notebook, I simulated pattern formation through this model and explored this equation using Python. Python's Numpy library and Scipy library were used to solve this equation and Matplotlib for were used for visualization.
+In this notebook, I explored the behavior of a logistic map, which is a mathematical function used in modeling population growth, and its sensitive dependence on its parameters. For this, I used Python's NumPy library to evaluate its recurring equation and Matplotlib library for visualization.
 
 <br />
 
