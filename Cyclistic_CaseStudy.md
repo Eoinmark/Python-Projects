@@ -92,12 +92,12 @@ merged_df['rideable_type'].unique()
 merged_df['start_station_name'].unique()
 ```
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/54ec9fac-8238-4370-8ab7-4d78ee19d667)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/b16d5e44-f615-4f15-9d8e-a3cb0aae9e64)
 
 ```
 merged_df['end_station_name'].unique()
 ```
-![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/ee1d7396-c047-463e-8d2a-6f606ab1a9cc)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/a0827454-0c5c-4580-8d14-21f2b7c9c475)
 
 ```
 merged_df['member_casual'].unique()
