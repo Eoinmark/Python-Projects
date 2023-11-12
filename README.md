@@ -56,19 +56,13 @@ In this notebook, I explored the behavior of a logistic map, which is a mathemat
 
 ## Core Competencies
 
-* Programming Languages: Python, Fortran, SQL, R and C++
-* Tools: MySQL, Jupiter Notebook, Tableau, MS Excel and Google Sheets
+- Programming Languages: Python, Fortran, SQL, R and C++
+- Tools: MySQL, Jupiter Notebook, Tableau, MS Excel and Google Sheets
 
 <br />
 
 ## Certificates
 
+- [Sample Certificate](link)
 
-## About Me
-
-
-![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/016cc6b2-36dc-479e-93b0-6d43c1a9b37d)
-
-
-I am John Mark Lappay, a fresh graduate from the University of the Philippines - Los Baños.
 
