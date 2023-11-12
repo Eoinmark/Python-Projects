@@ -210,6 +210,8 @@ LIMIT 100;
 
 After importing our data into the ``` cyclistic ``` table we can now perform queries. In this section, all data visualizations were done in Tableau Public.
 
+#
+
 ### Population of Casual Riders Vs. Annual Members
 
 **Query**
@@ -235,6 +237,8 @@ GROUP BY
 
 * More than half of Cyclistic's customers purchased annual membership
 * Almost 40% of Cyclistic's customers are casual riders 
+
+#
 
 ### Ride Duration Statistics of Casual Riders and Annual Members**
 
@@ -269,6 +273,8 @@ GROUP BY
 * Casual riders have an average of 28 minutes of ride duration but a high standard deviation means that the ride duration of casual riders in general varies significantly from this value.
 * Annual members have an average of 13 minutes of ride duration, and a low standard deviation shows that most of the annual members' ride duration is more or less close to this value.
 
+#
+
 ### Bike Preferences of Casual Riders and Annual Members
 
 **Query**
@@ -299,6 +305,8 @@ GROUP BY
 * For annual members, the most popular choice for bike type is the electric bike (51.90%) and then followed by the classic bike (36.78%).
 * Both types of customers chose electric bikes the most, and dock bikes the least.
 
+#
+
 ### Casual Riders VS Annual Members Weekly Cyclistic Use
 
 **Query**
@@ -326,6 +334,8 @@ ORDER BY
 **Findings**
 * For casual riders, the use of Cyclistic is almost constant at the beginning of the week and then would rise towards the latter part of the week, peaking at Saturday and would gradually fall on Sunday until Monday of a new week.
 * For annual members, the rise in the use of Cyclistic tends to be in the middle of the week and then would fall on the weekends.
+
+#
 
 ### Casual Riders VS Annual Members Monthly Cyclistic Use
 
