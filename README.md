@@ -13,11 +13,13 @@ I can be contacted through:
 
 <img align="left" width="250" height="150" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
-Lorem ipsum dolor sit amer
+This is a case study I accomplished as a capstone project for the Google Data Analytics course. I assumed the position of a junior data analyst for a bike-share company called Cyclistics. For this role, I used Python's Pandas library to perform data cleaning, data wrangling, data preprocessing and data analysis from the company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis on the data and Tableu for data visualization and presenting my suggestions based on the key finding of my analysis.
 
 #
+<img align="left" width="250" height="150" src="https://github.com/Eoinmark/Python-Projects/assets/145372680/1d6770b4-dc32-4ba8-a17f-c7317b62950c"> **[Bike-sharing Company (Cyclistic) Case Study](https://github.com/Eoinmark/Python-Projects/blob/main/Cyclistic_CaseStudy.md)**
 
-lorem ipsuum
+This is a case study I accomplished as a capstone project for the Google Data Analytics course. I assumed the position of a junior data analyst for a bike-share company called Cyclistics. For this role, I used Python's Pandas library to perform data cleaning, data wrangling, data preprocessing and data analysis from the company's customer database to generate data-driven insights. Also, I used SQL queries using MySQL to perform further analysis on the data and Tableu for data visualization and presenting my suggestions based on the key finding of my analysis.
+
 
 <br />
 
