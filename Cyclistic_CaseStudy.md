@@ -317,12 +317,10 @@ ORDER BY
 ```
 
 **Data**
-
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0cb3abe6-be9b-4c73-be26-ba5aad119ed7)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/853b50e7-e0a3-47d3-ac01-09a6402975e9)
 
 **Visualization**
-
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/0dd459d3-39e6-4771-a4a6-84e36fd0147b)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/cdc5f256-2009-4095-9aa1-60d621e3242b)
 
 **Findings**
 * For casual riders, the use of Cyclistic is almost constant at the beginning of the week and then would rise towards the latter part of the week, peaking at Saturday and would gradually fall on Sunday until Monday of a new week.
@@ -350,13 +348,13 @@ ORDER BY
 
 **Data**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/b39ce222-499b-4223-91a3-74e8eb081f78)
-
-For better access, the ```month_started``` is re-indexed to start from 1 (July 2022) to 13 (July 2023).
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/7f0067db-82e1-4471-96d7-8feaeda2947e)
 
 **Visualization**
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a18c2a2e-035b-47c9-acb6-d40dc75758a0)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/36e3e35a-0a76-4668-b0d1-39e5baf70a6a)
+
+Note that the ```month_started``` is re-indexed to start from 1 (July 2022) to 13 (July 2023).
 
 **Findings**
 * Both casual riders and annual members show almost a similar trend in the use of Cyclistic over the course of a year.
@@ -368,7 +366,8 @@ For better access, the ```month_started``` is re-indexed to start from 1 (July 2
 The analysis of our data is summarized on a dashboard created using Tableau Public, and accessible through the link below:
 https://public.tableau.com/authoring/Cyclistic_dashboard_16967675172600/Dashboard1#1
 
-![image](https://github.com/Eoinmark/Data-Analytics-Portfolio/assets/145372680/a132b29b-ca0d-46d7-89d6-d6314950a5d1)
+![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/2efc851c-6591-45a0-8826-72a2da902228)
+
 
 **Key Findings**
 * More than half of Cyclistic's customers are annual members. The casual riders are only 40% of their total customers.
