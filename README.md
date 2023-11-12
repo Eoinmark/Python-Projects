@@ -10,5 +10,5 @@ I can be contacted through:
 
 ![image](https://github.com/Eoinmark/Python-Projects/assets/145372680/016cc6b2-36dc-479e-93b0-6d43c1a9b37d)
 
-I am John Mark Lappay, a fresh graduate from the University of the Philippines - Los Banos.
+I am John Mark Lappay, a fresh graduate from the University of the Philippines - Los Ba\~nos.
 
